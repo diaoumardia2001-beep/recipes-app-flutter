@@ -121,12 +121,14 @@ class SettingsScreen extends StatelessWidget {
   Widget _buildThemeCard(
       BuildContext context, ThemeData theme, ColorScheme colorScheme) {
     final isDark = themeNotifier.isDark;
-    return Container(
-      decoration: BoxDecoration(
-        color: colorScheme.surface,
+    return Card(
+      color: colorScheme.surface,
+      elevation: 0,
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.onSurface.withValues(alpha: 0.08)),
+        side: BorderSide(color: colorScheme.onSurface.withValues(alpha: 0.08)),
       ),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
           // Theme mode switch
@@ -208,12 +210,14 @@ class SettingsScreen extends StatelessWidget {
       (Icons.flag_rounded, 'Origine', 'Côte d\'Ivoire 🇨🇮'),
     ];
 
-    return Container(
-      decoration: BoxDecoration(
-        color: colorScheme.surface,
+    return Card(
+      color: colorScheme.surface,
+      elevation: 0,
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.onSurface.withValues(alpha: 0.08)),
+        side: BorderSide(color: colorScheme.onSurface.withValues(alpha: 0.08)),
       ),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: items.asMap().entries.map((entry) {
           final i = entry.key;

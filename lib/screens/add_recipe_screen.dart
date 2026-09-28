@@ -145,9 +145,11 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
       body: Form(
         key: _formKey,
         autovalidateMode: AutovalidateMode.onUserInteraction,
-        child: ListView(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-          children: [
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
             // Header
             _buildSectionCard(
               context,
@@ -480,7 +482,8 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
           ],
         ),
       ),
-    );
+    ),
+  );
   }
 
   Widget _buildSectionCard(BuildContext context, {required Widget child}) {
