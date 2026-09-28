@@ -120,7 +120,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
-              context.go('/');
+              context.goNamed('home');
             },
             child: const Text('Voir les recettes'),
           ),
@@ -139,7 +139,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
         title: const Text('Nouvelle recette'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded),
-          onPressed: () => context.go('/'),
+          onPressed: () => context.goNamed('home'),
         ),
       ),
       body: Form(

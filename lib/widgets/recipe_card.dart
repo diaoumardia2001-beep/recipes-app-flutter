@@ -108,7 +108,10 @@ class RecipeCard extends StatelessWidget {
   Widget _buildGridCard(
       BuildContext context, ThemeData theme, ColorScheme colorScheme) {
     return GestureDetector(
-      onTap: () => context.go('/recipe/${recipe.id}'),
+      onTap: () => context.pushNamed(
+        'recipe_detail',
+        pathParameters: {'id': recipe.id},
+      ),
       child: Card(
         clipBehavior: Clip.antiAlias,
         child: Column(
@@ -281,7 +284,10 @@ class RecipeCard extends StatelessWidget {
   Widget _buildListCard(
       BuildContext context, ThemeData theme, ColorScheme colorScheme) {
     return GestureDetector(
-      onTap: () => context.go('/recipe/${recipe.id}'),
+      onTap: () => context.pushNamed(
+        'recipe_detail',
+        pathParameters: {'id': recipe.id},
+      ),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(10),

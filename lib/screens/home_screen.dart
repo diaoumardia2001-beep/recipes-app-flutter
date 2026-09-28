@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     subtitle:
                         'Essayez un autre terme de recherche ou ajoutez votre propre recette.',
                     buttonLabel: 'Ajouter une recette',
-                    onButtonPressed: () => context.go('/add'),
+                    onButtonPressed: () => context.goNamed('add_recipe'),
                   )
                 : _isGridView
                     ? LayoutBuilder(
@@ -173,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => context.go('/add'),
+        onPressed: () => context.goNamed('add_recipe'),
         backgroundColor: colorScheme.secondary,
         foregroundColor: Colors.white,
         icon: const Icon(Icons.add_rounded),

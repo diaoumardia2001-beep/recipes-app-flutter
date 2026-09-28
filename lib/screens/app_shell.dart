@@ -26,13 +26,13 @@ class AppShell extends StatelessWidget {
         onDestinationSelected: (index) {
           switch (index) {
             case 0:
-              context.go('/');
+              context.goNamed('home');
               break;
             case 1:
-              context.go('/add');
+              context.goNamed('add_recipe');
               break;
             case 2:
-              context.go('/settings');
+              context.goNamed('settings');
               break;
           }
         },

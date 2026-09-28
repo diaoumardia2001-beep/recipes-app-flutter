@@ -36,7 +36,7 @@ class _RecipesAppState extends State<RecipesApp> {
           ),
           GoRoute(
             path: '/add',
-            name: 'add',
+            name: 'add_recipe',
             builder: (context, state) => const AddRecipeScreen(),
           ),
           GoRoute(
@@ -50,7 +50,7 @@ class _RecipesAppState extends State<RecipesApp> {
       // Detail route is outside shell (full screen, no NavigationBar)
       GoRoute(
         path: '/recipe/:id',
-        name: 'recipeDetail',
+        name: 'recipe_detail',
         builder: (context, state) {
           final id = state.pathParameters['id'] ?? '';
           return RecipeDetailScreen(recipeId: id);
